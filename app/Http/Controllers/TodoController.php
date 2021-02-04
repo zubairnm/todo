@@ -36,7 +36,7 @@ class TodoController extends Controller
         //return back();
     }
 
-    public function edit($id){
+    /*public function edit($id){
         //dd($id);
 
         //$todo = Todo::find($id);
@@ -45,12 +45,12 @@ class TodoController extends Controller
         //dd($todo);
         return view('update',compact('todo'));
 
-    }
-    /*public function edit(Todo $id){
-        dd($id);        
+    }*/
+    public function edit(Todo $todo){
+        //dd($id);        
         return view('update',compact('todo'));
 
-    }*/
+    }
 
     public function update(Request $request, Todo $todo){
         $validateData = $request->validate([

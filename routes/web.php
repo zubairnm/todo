@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,7 +23,7 @@ Route::post('/create',"App\Http\Controllers\TodoController@store")->name('store'
     return view('welcome',['name'=>'Zubair']);
 });*/ 
 
-Route::get('/edit/{id}',"App\Http\Controllers\TodoController@edit")->name('edit');
+Route::get('/edit/{todo}',"App\Http\Controllers\TodoController@edit")->name('edit');
 
 Route::post("/update/{todo}","App\Http\Controllers\TodoController@update")->name('update');
 
